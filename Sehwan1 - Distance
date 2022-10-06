@@ -1,0 +1,72 @@
+package org.firstinspires.ftc.teamcode;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
+
+@Autonomous
+public class AutonomousPractice1 extends LinearOpMode {
+  private DcMotor left;
+  private DcMotor right;
+  
+  private final double wheelCircumference = 90*3.14;
+  private final double gearReduction = 3.61*5.23;
+  //values can be found with google (ex. https://www.revrobotics.com/rev-41-1603/)
+  private final double motorCounts = 28.0;
+  
+  private final double countsPerWheelRev = countsPerRev * driveGearReduction;
+  private final double RevPerMM = countsPerWheelRev/Wheel_Circumference;
+  
+  public void runOpMode(){
+    left = hardwareMap.get(DcMotor, "leftMotor");
+    right = hardwareMap.get(DcMotor, "rightMotor");
+    
+    int tgt = tickstoDistance(100 * RevPerMM);
+    
+    left.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+    right.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+    
+    left.setTargetPosition(tgt);
+    right.setTargetPosition(tgt);
+    
+    left.setMode(RUN_TO_POSITION);
+    right.setMode(RUN_TO_POSITION);
+    
+    left.setPower(1);
+    right.setPower(1);
+    
+    priavte ElapsedTime count = new ElapsedTime();
+    int time = count.seconds();
+    
+    while (time <= 1){
+      right.setPower(-0.1);
+      left.setPower(0.1);
+    }
+    
+    right.setPower(0);
+    left.setPower(0);
+    count.reset();
+    time = count;
+    
+    while (time <= 10){
+      console.log("Standing......")
+      //this will probably break a lot of things with no delay lol
+    }
+    
+    private DistanceSensor front;
+    
+    while (front.getDistance(DistanceUnit.CM)>10){
+      left.setPower(1);
+      right.setPower(1);
+    }
+    
+    right.setPower(0);
+    left.setPower(0);
+    
+    while(opModeIsActive() && left1.isBusy() && left2.isBusy() && right1.isBusy() && right2.isBusy())
+    {
+      telemtry.addData("Position: ", "left1.getCurrentPosition());
+    }
+  }
