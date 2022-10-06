@@ -25,5 +25,7 @@ Link For Using Distance and Time: https://drive.google.com/file/d/1dNCy881F6UluS
 ⠀⠀⠀⠀⠀⠀⠀⢿⣿⣦⣄⣀⣠⣴⣿⣿⠁⠀⠈⠻⣿⣿⣿⣿⡿⠏⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⠿⠿⠿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-No way its amogus!!!!!
+No way its amogus!!!
+[download](https://user-images.githubusercontent.com/114032655/194437973-5babfd87-d4ff-41ec-8d4b-3a9e7084bc02.png)
+!!!
 Mogus is the best
