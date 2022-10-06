@@ -1,0 +1,20 @@
+//imports
+@Autonomous
+ Public class DistanceSensorPractices extends LinearOpMode();
+ {
+  Private DcMotorleft1
+  Private DCMotorright1
+ }
+ Private final double countsPerRev = 28.0; 
+ Private final double driveGearReduction = 18.8803;
+ Private final double wheel_circumference = 188.4;
+ Distance = hardwareMap.get(DistanceSensor.class, “dist”,);
+  distance.getDistance(DistanceUnit.MM);
+ motor.setMode(RUN_TO_POSITION);
+ motor.setTargetPosition(200)
+ motor.setPower(1);
+ while(opModeIsActive() &&.isBusy(1);
+	{
+	    telemetry.oddData(motor.set(motor.getcurrentPosition(1);
+	    telemetry.update();
+}
